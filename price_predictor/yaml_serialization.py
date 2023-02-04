@@ -15,6 +15,6 @@ def serialize_to_yaml(dictionary: dict, file_name: str, msg: str = None) -> None
 
 
 # Load feature yaml files to dictionaries
-def deserialize_make_yaml(file_name):
+def deserialize_make_yaml(file_name: str) -> None:
     with open(file_name, 'r', encoding='utf-8') as file:
         return yaml.load(file, Loader=yaml.FullLoader)

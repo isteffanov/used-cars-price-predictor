@@ -8,7 +8,7 @@ def create_feature_template_yaml(make_list: list, file_name: str, msg=None) -> N
     serialize_to_yaml(make_dictonary, file_name, msg)
 
 
-def main():
+def main() -> None:
     parser = ArgumentParser()
     parser.add_argument('--make-list', nargs='+', type=list, required=True, dest='make_list')
     parser.add_argument('--dest', type=str, required=True)
