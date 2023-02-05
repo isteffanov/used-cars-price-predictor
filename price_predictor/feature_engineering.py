@@ -15,11 +15,12 @@ def populate_feature_template_to_dataframe(df: pd.DataFrame, column_name_result,
 
 
 def add_class_feature(df: pd.DataFrame) -> pd.DataFrame:
-    return populate_feature_template_to_dataframe(df, 'class', 'manufacturer_name', '../config/make_class.yaml')
+    import os; print(os.getcwd())
+    return populate_feature_template_to_dataframe(df, 'class', 'manufacturer_name', 'config/make_class.yaml')
 
 
 def add_country_feature(df: pd.DataFrame) -> pd.DataFrame:
-    return populate_feature_template_to_dataframe(df, 'country_of_origin', 'manufacturer_name', '../config/make_country.yaml')
+    return populate_feature_template_to_dataframe(df, 'country_of_origin', 'manufacturer_name', 'config/make_country.yaml')
 
 
 def add_age_feature(df: pd.DataFrame) -> pd.DataFrame:
