@@ -15,7 +15,6 @@ def populate_feature_template_to_dataframe(df: pd.DataFrame, column_name_result,
 
 
 def add_class_feature(df: pd.DataFrame) -> pd.DataFrame:
-    import os; print(os.getcwd())
     return populate_feature_template_to_dataframe(df, 'class', 'manufacturer_name', 'config/make_class.yaml')
 
 
@@ -25,4 +24,9 @@ def add_country_feature(df: pd.DataFrame) -> pd.DataFrame:
 
 def add_age_feature(df: pd.DataFrame) -> pd.DataFrame:
     df['age'] = 2019 - df['year_produced']
+    return df
+
+
+def add_is_transmission_mechanical_feature(df: pd.DataFrame) -> pd.DataFrame:
+    df['is_transmission_mechanical'] = df['transmission'] == 'mechanical'
     return df

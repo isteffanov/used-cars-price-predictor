@@ -3,7 +3,6 @@ import yaml
 
 def serialize_to_yaml(dictionary: dict, file_name: str, msg: str = None) -> None:
     file_name = "./config/" + file_name
-    import os; print(os.getcwd())
     # File will be exporeted in a new folder named yaml
     with open(file_name, 'w+', encoding="utf-8") as file:
         if msg is not None:
