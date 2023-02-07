@@ -7,9 +7,9 @@ download_dataset:
 	mkdir -p data/
 	mv cars.csv data/
 
+LIST := $(shell tail -n +2 data/cars.csv | cut -d ',' -f 1 | sort | uniq | sort | tr '\n' ' ')
 
 .PHONY: create_make_yaml_template
 create_make_yaml_template:
-	LIST = tail -n +2 data/cars.csv | cut -d ',' -f 1 | sort | uniq | sort | tr '\n' ' '
-	python3 scripts/create_template_make_yaml.py --list $(LIST) --dest config/template_make.yaml
+	python3 scripts/create_make_yaml_template.py --make-list $(LIST) --dest template_make.yaml
 
