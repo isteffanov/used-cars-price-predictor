@@ -1,0 +1,6 @@
+include config/*.yaml
+include notebooks/*/*.ipynb
+recursive-include scripts *.py
+include install.sh Makefile
+include JOURNAL.md README.md
+include requirements.txt
